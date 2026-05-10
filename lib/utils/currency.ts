@@ -33,7 +33,7 @@ export function getCurrencySymbol(code: string): string {
   return CURRENCY_SYMBOLS[code] || code;
 }
 
-export function formatCurrency(amount: number, currency: string = "USD"): string {
+export function formatCurrency(amount: number, currency: string = "INR"): string {
   const symbol = getCurrencySymbol(currency);
   const formatted = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 0,
@@ -42,7 +42,7 @@ export function formatCurrency(amount: number, currency: string = "USD"): string
   return `${symbol}${formatted}`;
 }
 
-export function formatCurrencyCompact(amount: number, currency: string = "USD"): string {
+export function formatCurrencyCompact(amount: number, currency: string = "INR"): string {
   const symbol = getCurrencySymbol(currency);
   if (amount >= 1000) {
     return `${symbol}${(amount / 1000).toFixed(1)}k`;

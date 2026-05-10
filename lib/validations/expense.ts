@@ -11,7 +11,7 @@ const expenseCategoryEnum = z.enum([
 export const createExpenseSchema = z.object({
   category: expenseCategoryEnum,
   amount: z.number().min(0, "Amount cannot be negative"),
-  currency: z.string().length(3).default("USD"),
+  currency: z.string().length(3).default("INR"),
   description: z.string().max(300).optional(),
   date: z.string().datetime().optional(),
 });

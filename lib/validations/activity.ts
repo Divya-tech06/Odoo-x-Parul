@@ -15,7 +15,7 @@ export const createActivitySchema = z.object({
   title: z.string().min(1, "Activity title is required").max(200),
   category: activityCategoryEnum,
   cost: z.number().min(0, "Cost cannot be negative").default(0),
-  currency: z.string().length(3).default("USD"),
+  currency: z.string().length(3).default("INR"),
   duration: z.number().int().min(0).optional(),
   date: z.string().datetime().optional(),
   notes: z.string().max(1000).optional(),

@@ -30,7 +30,7 @@ interface BudgetState {
 }
 
 export const useBudgetStore = create<BudgetState>((set, get) => ({
-  baseCurrency: "USD",
+  baseCurrency: "INR",
   exchangeRates: FALLBACK_EXCHANGE_RATES,
   totalCost: 0,
   budgetByCategory: {

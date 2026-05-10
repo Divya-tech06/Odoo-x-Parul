@@ -80,7 +80,7 @@ model Trip {
   visibility     Visibility @default(PRIVATE)
   shareToken     String?    @unique
   budgetTarget   Float?
-  budgetCurrency String?    @default("USD")
+  budgetCurrency String?    @default("INR")
   createdAt      DateTime   @default(now())
   updatedAt      DateTime   @updatedAt
 
@@ -119,7 +119,7 @@ model Activity {
   title     String
   category  String
   cost      Float     @default(0)
-  currency  String    @default("USD")
+  currency  String    @default("INR")
   duration  Int?
   date      DateTime?
   notes     String?
@@ -137,7 +137,7 @@ model Expense {
   tripId      String
   category    String
   amount      Float
-  currency    String    @default("USD")
+  currency    String    @default("INR")
   description String?
   date        DateTime? @default(now())
   createdAt   DateTime  @default(now())

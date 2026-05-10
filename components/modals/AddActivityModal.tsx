@@ -17,13 +17,13 @@ export default function AddActivityModal() {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("sightseeing");
   const [cost, setCost] = useState("");
-  const [currency, setCurrency] = useState("USD");
+  const [currency, setCurrency] = useState("INR");
   const [duration, setDuration] = useState("");
   const [notes, setNotes] = useState("");
   const [saving, setSaving] = useState(false);
 
   const resetForm = () => {
-    setTitle(""); setCategory("sightseeing"); setCost(""); setCurrency("USD");
+    setTitle(""); setCategory("sightseeing"); setCost(""); setCurrency("INR");
     setDuration(""); setNotes("");
   };
 
